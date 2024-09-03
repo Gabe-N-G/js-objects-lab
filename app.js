@@ -44,8 +44,24 @@ Solve Exercise 4 here:
 */
 
 // how do you find pokemon in array pokemon where starter = true?
-// console.log(pokemon.filter(pokemon => pokemon.starter === true))
+console.log(pokemon.filter(pokemon => pokemon.starter === true))
 
 
 game.party.push(pokemon[24])
 console.log(game.party)
+
+/*
+Exercise 5
+1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+
+
+Solve Exercise 5 here:
+*/
+
+game.party.push(pokemon[150])
+game.party.push(pokemon[51])
+game.party.push(pokemon[112])
+console.log(game.party)
+
+
