@@ -101,4 +101,16 @@ Solve Exercise 7 here:
 */
 
 game.party.splice(0,1,pokemon[25])
-console.log(game)
+// console.log(game)
+
+/*
+Exercise 8
+1. Print the name of each Pokémon in your party.
+2. Consider using a loop or an array method to access each Pokémon's name.
+
+Solve Exercise 8 here:
+*/
+
+game.party.forEach((poke)=>{
+    console.log(poke.name)
+})
