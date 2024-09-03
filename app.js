@@ -44,11 +44,11 @@ Solve Exercise 4 here:
 */
 
 // how do you find pokemon in array pokemon where starter = true?
-console.log(pokemon.filter(pokemon => pokemon.starter === true))
+// console.log(pokemon.filter(pokemon => pokemon.starter === true))
 
 
 game.party.push(pokemon[24])
-console.log(game.party)
+// console.log(game.party)
 
 /*
 Exercise 5
@@ -62,6 +62,23 @@ Solve Exercise 5 here:
 game.party.push(pokemon[150])
 game.party.push(pokemon[51])
 game.party.push(pokemon[112])
-console.log(game.party)
+// console.log(game.party)
+
+/*
+Exercise 6
+1. Set the `completed` property to true for gyms with a difficulty below 3.
+2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
 
 
+Solve Exercise 6 here:
+*/
+
+let easyGym = game.gyms.filter(gym => gym.difficulty < 3 )
+
+console.log(easyGym)
+
+easyGym.forEach((gym)=>{
+    gym.completed = true
+})
+
+console.log(game)
