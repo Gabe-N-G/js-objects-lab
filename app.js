@@ -251,3 +251,22 @@ game.partyCount = function(){
 
 // console.log(game)
 game.partyCount()
+
+/*
+Exercise 15
+1. Now, complete gyms with a difficulty below 8. Reflect on how this is similar to or different from the previous gym exercises.
+(change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 15 here:
+*/
+
+
+let hardGym = game.gyms.filter(gym => gym.difficulty < 8 )
+
+// console.log(medGym)
+
+hardGym.forEach((gym)=>{
+    gym.completed = true
+})
+
+game.gymStatus()
