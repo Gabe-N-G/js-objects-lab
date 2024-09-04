@@ -280,4 +280,23 @@ Solve Exercise 16 here:
 */
 
 console.log(game)
-//LOOK UPON MY WORKS AND TREMBLE
+//LOOK UPON MY WORKS AND YE MORTALS, AND DESPAIR
+
+/*
+Exercise 17
+1. Arrange the Pokémon in `game.party` by their HP. The one with the highest HP should come first.
+2. You'll need to use the `.sort()` method. How does the compare function work in sorting numbers?
+
+
+Solve Exercise 17 here:
+*/
+
+console.log(game.party) 
+
+game.party.sort((a,b) => b.hp - a.hp)
+
+console.log(game.party)
+
+// // sort by value
+// console.log(items.sort((a, b) => a.value - b.value));
+
