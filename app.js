@@ -125,7 +125,7 @@ Exercise 9
 Solve Exercise 9 here:
 */
 
-// console.log(pokemon.filter(pokemon => pokemon.starter === true))
+console.log(pokemon.filter(pokemon => pokemon.starter === true))
 
 /*
 Exercise 10
@@ -139,12 +139,12 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 10 here:
 */
 
-// game.catchPokemon = function (pokemonObj) {
-    // game.party.push(pokemonObj)
-// }
+game.catchPokemon = function (pokemonObj) {
+    game.party.push(pokemonObj)
+}
 
-// game.catchPokemon(pokemon[142])
-// console.log(game)
+game.catchPokemon(pokemon[142])
+console.log(game)
 
 /*
 Exercise 11
@@ -300,3 +300,40 @@ console.log(game.party)
 // // sort by value
 // console.log(items.sort((a, b) => a.value - b.value));
 
+/*
+Exercise 18
+Add a new property to the `game` object called `collection` and initialize its value to an empty array.
+
+Copy the `catchPokemon` method you wrote in Exercise Twelve and paste it below. Modify it so that:
+  - Ensure that no more than six Pokemon can be in the party at any time. 
+    Excess Pokemon should be placed in the `game.collection` array.
+  - It's up to you how to distribute Pokemon in a situation where more than six 
+    would be placed into the `game.party` array.
+
+Again, for this exercise, it's okay to have a negative number of pokeballs.
+
+After updating the method, use it by calling it and passing in a pokemon object of your choice from the `pokemon` data to catch it.
+
+Also, log the `game.items` array to confirm that the pokeball quantity is being decremented.
+
+Solve Exercise 18 here:
+*/
+
+
+game.collection = []
+// console.log(game)
+
+game.catchPokemon = function (pokemonObj) { 
+  let pokeballs = game.items.find(item => item.name === "pokeball")
+  pokeballs.quantity = pokeballs.quantity - 1
+  console.log(game.items)
+  if (game.party.length < 6){
+    game.party.push(pokemonObj) 
+  } else {
+    console.log (`${pokemonObj.name} was sent to storage!`)
+    game.collection.push(pokemonObj)
+  }
+  console.log(game)
+}
+
+game.catchPokemon(pokemon[53])
