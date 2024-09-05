@@ -366,7 +366,7 @@ game.catchPokemon = function (pokemonObj) {
   console.log(game)
 }
 
-game.catchPokemon(12)
+// game.catchPokemon(12)
 
 /*
 Exercise 20
@@ -379,9 +379,7 @@ If there is not a match, then return a string noting that the selected Pokemon d
 Solve Exercise 20 here:
 */
 
-game.items[1].quantity = 10
-
-
+game.items[1].quantity = 5
 
 // console.log(pokemon.find(poke => poke.name === "Weedle"))
 // console.log(pokemon.find(poke => poke.name.toLowerCase() === "weedle"))
@@ -407,6 +405,38 @@ game.catchPokemon = function (pokemonName) {
   console.log(game)
 }
 
-game.catchPokemon("rock")
-game.catchPokemon("weedle")
-game.catchPokemon("Weedle")
+// game.catchPokemon("rock")
+// game.catchPokemon("weedle")
+// game.catchPokemon("Weedle")
+
+/*
+Exercise 21
+Dynamically construct an object with the existing `pokemon` data sorted by the different pokemon types. The object will have this structure:
+
+{
+  grass: [
+    { number: 1, name: 'Bulbasaur', type: 'grass', hp: 45, starter: true },
+    { number: 2, name: 'Ivysaur', type: 'grass', hp: 60, starter: false },
+    { number: 3, name: 'Venusaur', type: 'grass', hp: 80, starter: false },
+    * more grass type Pokemon objects...
+  ],
+  fire: [
+    { number: 4, name: 'Charmander', type: 'fire', hp: 39, starter: true },
+    * more fire type Pokemon objects...
+  ],
+  water: [
+    * water type Pokemon objects...
+  ],
+  * etc... until there is an array for every Pokemon type!
+}
+
+Log the object when it's constructed.
+
+Solve Exercise 21 here:
+*/
+
+// stuck here, has to create a an array of types then iterate that array of types into a filter to create the diferent element types.
+
+// console.log(pokemon[0].type)
+// console.log(pokemon.filter(ele => ele.type === "grass"))
+
